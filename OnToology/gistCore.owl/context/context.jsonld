@@ -1,0 +1,965 @@
+{
+  "@context" : {
+    "timeZoneStandardUsed" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/timeZoneStandardUsed",
+      "@type" : "@id"
+    },
+    "hasStreetAddress" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/hasStreetAddress",
+      "@type" : "@id"
+    },
+    "allows" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/allows",
+      "@type" : "@id"
+    },
+    "ElectricCurrent" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/ElectricCurrent"
+    },
+    "denominator" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/denominator",
+      "@type" : "@id"
+    },
+    "identifies" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/identifies",
+      "@type" : "@id"
+    },
+    "permanentGeoOccupies" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/permanentGeoOccupies",
+      "@type" : "@id"
+    },
+    "Address" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Address"
+    },
+    "hasPrecision" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/hasPrecision",
+      "@type" : "@id"
+    },
+    "SystemInstant" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/SystemInstant"
+    },
+    "UnitOfMeasure" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/UnitOfMeasure"
+    },
+    "HistoricalEvent" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/HistoricalEvent"
+    },
+    "ControlledVocabulary" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/ControlledVocabulary"
+    },
+    "governedBy" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/governedBy",
+      "@type" : "@id"
+    },
+    "universalTime" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/universalTime"
+    },
+    "ContemporaneousEvent" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/ContemporaneousEvent"
+    },
+    "directSubTaskOf" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/directSubTaskOf",
+      "@type" : "@id"
+    },
+    "Commitment" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Commitment"
+    },
+    "categorizedBy" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/categorizedBy",
+      "@type" : "@id"
+    },
+    "ControllerType" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/ControllerType"
+    },
+    "lastModifiedOn" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/lastModifiedOn",
+      "@type" : "@id"
+    },
+    "uniqueText" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/uniqueText",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "GeoPoint" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/GeoPoint"
+    },
+    "DegreeOfCommitment" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/DegreeOfCommitment"
+    },
+    "unitSymbol" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/unitSymbol",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "localDateTime" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/localDateTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "epoch" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/epoch",
+      "@type" : "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "occursAt" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/occursAt",
+      "@type" : "@id"
+    },
+    "RatioUnit" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/RatioUnit"
+    },
+    "TelephoneNumber" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/TelephoneNumber"
+    },
+    "license" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/license"
+    },
+    "AreaUnit" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/AreaUnit"
+    },
+    "Balance" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Balance"
+    },
+    "geoDirectlyContainedIn" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/geoDirectlyContainedIn",
+      "@type" : "@id"
+    },
+    "geoContainedIn" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/geoContainedIn",
+      "@type" : "@id"
+    },
+    "directs" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/directs",
+      "@type" : "@id"
+    },
+    "directPartOf" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/directPartOf",
+      "@type" : "@id"
+    },
+    "aspectOf" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/aspectOf",
+      "@type" : "@id"
+    },
+    "Organization" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Organization"
+    },
+    "Category" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Category"
+    },
+    "Equipment" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Equipment"
+    },
+    "Volume" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Volume"
+    },
+    "Permission" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Permission"
+    },
+    "Thing" : {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    },
+    "networkConnection" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/networkConnection",
+      "@type" : "@id"
+    },
+    "OrderedCollection" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/OrderedCollection"
+    },
+    "connectedTo" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/connectedTo",
+      "@type" : "@id"
+    },
+    "Room" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Room"
+    },
+    "hasTag" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/hasTag"
+    },
+    "giver" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/giver",
+      "@type" : "@id"
+    },
+    "BundledCatalogItem" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/BundledCatalogItem"
+    },
+    "basedOn" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/basedOn",
+      "@type" : "@id"
+    },
+    "toAgent" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/toAgent",
+      "@type" : "@id"
+    },
+    "Obligation" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Obligation"
+    },
+    "unitSymbolHTML" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/unitSymbolHTML",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Landmark" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Landmark"
+    },
+    "Offer" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Offer"
+    },
+    "triggeredBy" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/triggeredBy",
+      "@type" : "@id"
+    },
+    "BaseUnit" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/BaseUnit"
+    },
+    "ScheduledTask" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/ScheduledTask"
+    },
+    "GreenwichInstant" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/GreenwichInstant"
+    },
+    "Behavior" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Behavior"
+    },
+    "hasSubCategory" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/hasSubCategory",
+      "@type" : "@id"
+    },
+    "precedes" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/precedes",
+      "@type" : "@id"
+    },
+    "convertToStandard" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/convertToStandard",
+      "@type" : "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "Agreement" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Agreement"
+    },
+    "BuildingAddress" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/BuildingAddress"
+    },
+    "Medium" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Medium"
+    },
+    "CountryGovernment" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/CountryGovernment"
+    },
+    "recognizedBy" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/recognizedBy",
+      "@type" : "@id"
+    },
+    "HumanInstant" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/HumanInstant"
+    },
+    "MessageDefinition" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/MessageDefinition"
+    },
+    "GeoPoliticalRegion" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/GeoPoliticalRegion"
+    },
+    "permanentGeoOccupiedBy" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/permanentGeoOccupiedBy",
+      "@type" : "@id"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "decimalValue" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/decimalValue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "directlyPrecededBy" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/directlyPrecededBy",
+      "@type" : "@id"
+    },
+    "PhenomenaType" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/PhenomenaType"
+    },
+    "TimeZone" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/TimeZone"
+    },
+    "TimeInstant" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/TimeInstant"
+    },
+    "longitude" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/longitude",
+      "@type" : "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "localTime" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/localTime"
+    },
+    "hasPart" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/hasPart",
+      "@type" : "@id"
+    },
+    "hasDirectSuperCategory" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/hasDirectSuperCategory",
+      "@type" : "@id"
+    },
+    "Contract" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Contract"
+    },
+    "geoOccupiedBy" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/geoOccupiedBy",
+      "@type" : "@id"
+    },
+    "ContingentEvent" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/ContingentEvent"
+    },
+    "Count" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Count"
+    },
+    "parentOf" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/parentOf",
+      "@type" : "@id"
+    },
+    "about" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/about",
+      "@type" : "@id"
+    },
+    "Template" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Template"
+    },
+    "numerator" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/numerator",
+      "@type" : "@id"
+    },
+    "universalDateTime" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/universalDateTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "expressedIn" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/expressedIn",
+      "@type" : "@id"
+    },
+    "ContractTerm" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/ContractTerm"
+    },
+    "accepts" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/accepts",
+      "@type" : "@id"
+    },
+    "Taxonomy" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Taxonomy"
+    },
+    "hasIncumbent" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/hasIncumbent",
+      "@type" : "@id"
+    },
+    "Specification" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Specification"
+    },
+    "Temperature" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Temperature"
+    },
+    "Event" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Event"
+    },
+    "PhysicalIdentifiableItem" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/PhysicalIdentifiableItem"
+    },
+    "SimpleUnitOfMeasure" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/SimpleUnitOfMeasure"
+    },
+    "hasStandardUnit" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/hasStandardUnit",
+      "@type" : "@id"
+    },
+    "allocatedBy" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/allocatedBy",
+      "@type" : "@id"
+    },
+    "affects" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/affects",
+      "@type" : "@id"
+    },
+    "Person" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Person"
+    },
+    "Artifact" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Artifact"
+    },
+    "ElectronicMessageAddress" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/ElectronicMessageAddress"
+    },
+    "hasOrderedMember" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/hasOrderedMember",
+      "@type" : "@id"
+    },
+    "LivingThing" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/LivingThing"
+    },
+    "CoherentRatioUnit" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/CoherentRatioUnit"
+    },
+    "latitude" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/latitude",
+      "@type" : "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "toPlace" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/toPlace",
+      "@type" : "@id"
+    },
+    "fromPlace" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/fromPlace",
+      "@type" : "@id"
+    },
+    "offspringOf" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/offspringOf",
+      "@type" : "@id"
+    },
+    "viableRange" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/viableRange",
+      "@type" : "@id"
+    },
+    "renderedOn" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/renderedOn",
+      "@type" : "@id"
+    },
+    "hasNavigationalParent" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/hasNavigationalParent",
+      "@type" : "@id"
+    },
+    "PlannedEvent" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/PlannedEvent"
+    },
+    "basisFor" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/basisFor",
+      "@type" : "@id"
+    },
+    "recordedOn" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/recordedOn",
+      "@type" : "@id"
+    },
+    "fromAgent" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/fromAgent",
+      "@type" : "@id"
+    },
+    "GovernmentOrganization" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/GovernmentOrganization"
+    },
+    "IntellectualProperty" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/IntellectualProperty"
+    },
+    "TimeZoneStandard" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/TimeZoneStandard"
+    },
+    "name" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasDirectSubTask" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/hasDirectSubTask",
+      "@type" : "@id"
+    },
+    "DateInstant" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/DateInstant"
+    },
+    "RatioMagnitude" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/RatioMagnitude"
+    },
+    "PhysicalEvent" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/PhysicalEvent"
+    },
+    "PhysicalActionType" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/PhysicalActionType"
+    },
+    "Building" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Building"
+    },
+    "NetworkLink" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/NetworkLink"
+    },
+    "getter" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/getter",
+      "@type" : "@id"
+    },
+    "geoContains" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/geoContains",
+      "@type" : "@id"
+    },
+    "sequence" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/sequence",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "encryptedText" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/encryptedText",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "convertToBase" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/convertToBase",
+      "@type" : "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "hasMember" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/hasMember",
+      "@type" : "@id"
+    },
+    "Mass" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Mass"
+    },
+    "ProductMagnitude" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/ProductMagnitude"
+    },
+    "CatalogItem" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/CatalogItem"
+    },
+    "characterizedAs" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/characterizedAs",
+      "@type" : "@id"
+    },
+    "Magnitude" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Magnitude"
+    },
+    "DurationUnit" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/DurationUnit"
+    },
+    "hasGoal" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/hasGoal",
+      "@type" : "@id"
+    },
+    "prevents" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/prevents",
+      "@type" : "@id"
+    },
+    "affectedBy" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/affectedBy",
+      "@type" : "@id"
+    },
+    "partOf" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/partOf",
+      "@type" : "@id"
+    },
+    "SchemaMetaData" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/SchemaMetaData"
+    },
+    "hasMagnitude" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/hasMagnitude",
+      "@type" : "@id"
+    },
+    "ID" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/ID"
+    },
+    "MoleUnit" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/MoleUnit"
+    },
+    "hasBirthDate" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/hasBirthDate",
+      "@type" : "@id"
+    },
+    "Account" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Account"
+    },
+    "start" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/start",
+      "@type" : "@id"
+    },
+    "directlyRecognizedBy" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/directlyRecognizedBy",
+      "@type" : "@id"
+    },
+    "LuminousIntensity" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/LuminousIntensity"
+    },
+    "hasSubTask" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/hasSubTask",
+      "@type" : "@id"
+    },
+    "PostalAddress" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/PostalAddress"
+    },
+    "NetworkNode" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/NetworkNode"
+    },
+    "Network" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Network"
+    },
+    "Message" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Message"
+    },
+    "MimeType" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/MimeType"
+    },
+    "ElectricalCurrentUnit" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/ElectricalCurrentUnit"
+    },
+    "madeUpOf" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/madeUpOf",
+      "@type" : "@id"
+    },
+    "Extent" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Extent"
+    },
+    "actualEnd" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/actualEnd",
+      "@type" : "@id"
+    },
+    "hasBaseUnit" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/hasBaseUnit",
+      "@type" : "@id"
+    },
+    "Duration" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Duration"
+    },
+    "Goal" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Goal"
+    },
+    "ServiceSpecification" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/ServiceSpecification"
+    },
+    "Monetary" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Monetary"
+    },
+    "sameTimeAs" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/sameTimeAs",
+      "@type" : "@id"
+    },
+    "Place" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Place"
+    },
+    "LuminousIntensityUnit" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/LuminousIntensityUnit"
+    },
+    "MassUnit" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/MassUnit"
+    },
+    "multiplicand" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/multiplicand",
+      "@type" : "@id"
+    },
+    "Percentage" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Percentage"
+    },
+    "hasUoM" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/hasUoM",
+      "@type" : "@id"
+    },
+    "Content" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Content"
+    },
+    "Aspect" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Aspect"
+    },
+    "localDate" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/localDate"
+    },
+    "CountingUnit" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/CountingUnit"
+    },
+    "unitSymbolUnicode" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/unitSymbolUnicode",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Project" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Project"
+    },
+    "communicationAddressOf" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/communicationAddressOf",
+      "@type" : "@id"
+    },
+    "governs" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/governs",
+      "@type" : "@id"
+    },
+    "produces" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/produces",
+      "@type" : "@id"
+    },
+    "ReferenceValue" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/ReferenceValue"
+    },
+    "conversionOffset" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/conversionOffset",
+      "@type" : "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "InformationQuantity" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/InformationQuantity"
+    },
+    "Restriction" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Restriction"
+    },
+    "ProductCategory" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/ProductCategory"
+    },
+    "RenderedContent" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/RenderedContent"
+    },
+    "GeoVolume" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/GeoVolume"
+    },
+    "streetAddressOf" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/streetAddressOf",
+      "@type" : "@id"
+    },
+    "hasAltitude" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/hasAltitude",
+      "@type" : "@id"
+    },
+    "hasDeathDate" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/hasDeathDate",
+      "@type" : "@id"
+    },
+    "GeoRegion" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/GeoRegion"
+    },
+    "hasJurisdiction" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/hasJurisdiction",
+      "@type" : "@id"
+    },
+    "hasNavigationalChild" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/hasNavigationalChild",
+      "@type" : "@id"
+    },
+    "planned" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/planned",
+      "@type" : "@id"
+    },
+    "PhysicalSubstance" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/PhysicalSubstance"
+    },
+    "hasUniqueSuperCategory" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/hasUniqueSuperCategory",
+      "@type" : "@id"
+    },
+    "TemporalRelation" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/TemporalRelation"
+    },
+    "recognizes" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/recognizes",
+      "@type" : "@id"
+    },
+    "VolumeUnit" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/VolumeUnit"
+    },
+    "hasSuperCategory" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/hasSuperCategory",
+      "@type" : "@id"
+    },
+    "containedText" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/containedText",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ProductSpecification" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/ProductSpecification"
+    },
+    "LocalInstant" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/LocalInstant"
+    },
+    "multiplier" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/multiplier",
+      "@type" : "@id"
+    },
+    "TemperatureUnit" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/TemperatureUnit"
+    },
+    "CoherentUnit" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/CoherentUnit"
+    },
+    "actualStart" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/actualStart",
+      "@type" : "@id"
+    },
+    "Component" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Component"
+    },
+    "CoherentProductUnit" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/CoherentProductUnit"
+    },
+    "Text" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Text"
+    },
+    "plannedStart" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/plannedStart",
+      "@type" : "@id"
+    },
+    "geoOccupies" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/geoOccupies",
+      "@type" : "@id"
+    },
+    "hasToNode" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/hasToNode",
+      "@type" : "@id"
+    },
+    "DistanceUnit" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/DistanceUnit"
+    },
+    "geoDirectlyContains" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/geoDirectlyContains",
+      "@type" : "@id"
+    },
+    "hasDirectSubCategory" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/hasDirectSubCategory",
+      "@type" : "@id"
+    },
+    "Language" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Language"
+    },
+    "Tag" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Tag"
+    },
+    "identifiedBy" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/identifiedBy",
+      "@type" : "@id"
+    },
+    "OrdinalMember" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/OrdinalMember"
+    },
+    "OrdinalCollection" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/OrdinalCollection"
+    },
+    "ContentExpression" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/ContentExpression"
+    },
+    "Function" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Function"
+    },
+    "MolarQuantity" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/MolarQuantity"
+    },
+    "Actuator" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Actuator"
+    },
+    "hasPhysicalLocation" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/hasPhysicalLocation",
+      "@type" : "@id"
+    },
+    "Controller" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Controller"
+    },
+    "contributesTo" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/contributesTo",
+      "@type" : "@id"
+    },
+    "universalDate" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/universalDate"
+    },
+    "memberOf" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/memberOf",
+      "@type" : "@id"
+    },
+    "plannedEnd" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/plannedEnd",
+      "@type" : "@id"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "subTaskOf" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/subTaskOf",
+      "@type" : "@id"
+    },
+    "directlyPrecedes" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/directlyPrecedes",
+      "@type" : "@id"
+    },
+    "TaskTemplate" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/TaskTemplate"
+    },
+    "Transaction" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Transaction"
+    },
+    "Group" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Group"
+    },
+    "ProductUnit" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/ProductUnit"
+    },
+    "actual" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/actual",
+      "@type" : "@id"
+    },
+    "System" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/System"
+    },
+    "ContingentObligation" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/ContingentObligation"
+    },
+    "owns" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/owns",
+      "@type" : "@id"
+    },
+    "requires" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/requires",
+      "@type" : "@id"
+    },
+    "GeneralMediaType" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/GeneralMediaType"
+    },
+    "hasCommunicationAddress" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/hasCommunicationAddress",
+      "@type" : "@id"
+    },
+    "Requirement" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Requirement"
+    },
+    "conformsTo" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/conformsTo",
+      "@type" : "@id"
+    },
+    "EmailAddress" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/EmailAddress"
+    },
+    "Area" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Area"
+    },
+    "describedIn" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/describedIn",
+      "@type" : "@id"
+    },
+    "Task" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Task"
+    },
+    "hasUniqueNavigationalParent" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/hasUniqueNavigationalParent",
+      "@type" : "@id"
+    },
+    "orderedMemberOf" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/orderedMemberOf",
+      "@type" : "@id"
+    },
+    "end" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/end",
+      "@type" : "@id"
+    },
+    "hasParty" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/hasParty",
+      "@type" : "@id"
+    },
+    "respondsTo" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/respondsTo",
+      "@type" : "@id"
+    },
+    "DataSizeUnit" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/DataSizeUnit"
+    },
+    "offsetToUniversal" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/offsetToUniversal",
+      "@type" : "@id"
+    },
+    "hasDirectPart" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/hasDirectPart",
+      "@type" : "@id"
+    },
+    "EquipmentType" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/EquipmentType"
+    },
+    "GeoSegment" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/GeoSegment"
+    },
+    "hasFromNode" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/hasFromNode",
+      "@type" : "@id"
+    },
+    "Intention" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Intention"
+    },
+    "FormattedContent" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/FormattedContent"
+    },
+    "CurrencyUnit" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/CurrencyUnit"
+    },
+    "GeoRoute" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/GeoRoute"
+    },
+    "Collection" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Collection"
+    },
+    "Sensor" : {
+      "@id" : "https://ontologies.semanticarts.com/gist/Sensor"
+    }
+  }
+}

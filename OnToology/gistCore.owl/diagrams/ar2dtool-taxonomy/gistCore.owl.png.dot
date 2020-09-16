@@ -1,0 +1,42 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "gist:ProductCategory" "gist:OrdinalCollection" "gist:Actuator" "gist:DegreeOfCommitment" "gist:SchemaMetaData" "gist:Building" "gist:PostalAddress" "gist:BuildingAddress" "gist:PhenomenaType" "gist:ContentExpression" "gist:MimeType" "gist:Goal" "gist:Category" "gist:Medium" "gist:TelephoneNumber" "gist:PhysicalActionType" "gist:Transaction" "gist:SimpleUnitOfMeasure" "gist:RatioMagnitude" "gist:CatalogItem" "gist:Aspect" "gist:Event" "gist:Content" "gist:Collection" "gist:Landmark" "gist:Magnitude" "gist:Percentage" "gist:MessageDefinition" "gist:Function" "gist:BaseUnit" "gist:ReferenceValue" "gist:OrdinalMember" "gist:ContractTerm" "gist:Behavior" "gist:EmailAddress" "gist:Sensor" "gist:Intention" "gist:Address" "gist:Equipment" "gist:Requirement" "7d94b700:174964cf71c:-7e7d" "gist:OrderedCollection" "gist:ControllerType" "gist:ElectronicMessageAddress" "gist:GeneralMediaType" "gist:Specification" "gist:EquipmentType" ; /*classes style*/
+	"gist:ContractTerm" -> "gist:Specification" [ label = "rdfs:subClassOf" ];
+	"gist:ElectronicMessageAddress" -> "gist:Address" [ label = "rdfs:subClassOf" ];
+	"gist:PostalAddress" -> "gist:Address" [ label = "rdfs:subClassOf" ];
+	"gist:Medium" -> "gist:Category" [ label = "rdfs:subClassOf" ];
+	"gist:ControllerType" -> "gist:Category" [ label = "rdfs:subClassOf" ];
+	"gist:BuildingAddress" -> "gist:Address" [ label = "rdfs:subClassOf" ];
+	"gist:Percentage" -> "gist:RatioMagnitude" [ label = "rdfs:subClassOf" ];
+	"gist:Sensor" -> "gist:Equipment" [ label = "rdfs:subClassOf" ];
+	"gist:Aspect" -> "gist:Category" [ label = "rdfs:subClassOf" ];
+	"gist:ProductCategory" -> "gist:Category" [ label = "rdfs:subClassOf" ];
+	"gist:Actuator" -> "gist:Equipment" [ label = "rdfs:subClassOf" ];
+	"gist:OrderedCollection" -> "gist:Collection" [ label = "rdfs:subClassOf" ];
+	"gist:PhysicalActionType" -> "gist:Category" [ label = "rdfs:subClassOf" ];
+	"gist:Address" -> "gist:Content" [ label = "rdfs:subClassOf" ];
+	"gist:ContentExpression" -> "gist:Content" [ label = "rdfs:subClassOf" ];
+	"gist:BaseUnit" -> "gist:SimpleUnitOfMeasure" [ label = "rdfs:subClassOf" ];
+	"gist:TelephoneNumber" -> "gist:Address" [ label = "rdfs:subClassOf" ];
+	"gist:PhenomenaType" -> "gist:Category" [ label = "rdfs:subClassOf" ];
+	"gist:OrdinalMember" -> "7d94b700:174964cf71c:-7e7d" [ label = "rdfs:subClassOf" ];
+	"gist:OrdinalMember" -> "gist:Category" [ label = "rdfs:subClassOf" ];
+	"gist:Specification" -> "gist:Requirement" [ label = "rdfs:subClassOf" ];
+	"gist:MimeType" -> "gist:Category" [ label = "rdfs:subClassOf" ];
+	"gist:ReferenceValue" -> "gist:Magnitude" [ label = "rdfs:subClassOf" ];
+	"gist:Requirement" -> "gist:Intention" [ label = "rdfs:subClassOf" ];
+	"gist:Function" -> "gist:Intention" [ label = "rdfs:subClassOf" ];
+	"gist:Building" -> "gist:Landmark" [ label = "rdfs:subClassOf" ];
+	"gist:Behavior" -> "gist:Category" [ label = "rdfs:subClassOf" ];
+	"gist:OrdinalCollection" -> "gist:OrderedCollection" [ label = "rdfs:subClassOf" ];
+	"gist:Transaction" -> "gist:Event" [ label = "rdfs:subClassOf" ];
+	"gist:CatalogItem" -> "gist:Specification" [ label = "rdfs:subClassOf" ];
+	"gist:DegreeOfCommitment" -> "gist:Category" [ label = "rdfs:subClassOf" ];
+	"gist:EquipmentType" -> "gist:Category" [ label = "rdfs:subClassOf" ];
+	"gist:EmailAddress" -> "gist:ElectronicMessageAddress" [ label = "rdfs:subClassOf" ];
+	"gist:GeneralMediaType" -> "gist:Category" [ label = "rdfs:subClassOf" ];
+	"gist:Goal" -> "gist:Intention" [ label = "rdfs:subClassOf" ];
+	"gist:MessageDefinition" -> "gist:SchemaMetaData" [ label = "rdfs:subClassOf" ];
+
+}
